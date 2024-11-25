@@ -13,9 +13,5 @@ while(i < quizData.length){
 }
 
 
-let option1 = document.getElementById('option1');
-    option1.textContent = quizData[0].a;
-    console.log(quizData[0].a);
-    
 
 

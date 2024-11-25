@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quiz app</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 id="header"></h1>
-        <div class="options">
-            <input type="radio" name="option" id="option1">
-            <input type="radio" name="option" id="option2">
-            <input type="radio" name="option" id="option3">
-            <input type="radio" name="option" id="option4">
-            
+    <div id="quiz-container">
+        <h1>Quiz App</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <div id="answer-buttons" class="btn-container">
+                <button class="btn" id="a"></button>
+                <button class="btn" id="b"></button>
+                <button class="btn" id="c"></button>
+                <button class="btn" id="d"></button>
+            </div>
         </div>
-        <button type="submit" id="submit">submit</button>
-        
+        <button id="next-button" class="btn" style="display: none;">Next Question</button>
+        <div id="score-container" style="display: none;">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button id="restart-button" class="btn">Restart Quiz</button>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
-<script type="module" src="script.js"></script>
-</html> 
+</html>
