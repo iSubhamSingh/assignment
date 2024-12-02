@@ -1,4 +1,4 @@
-import { quizData } from './quizData.js'; // Adjust the path as necessary
+import { quizData } from './data.js';  
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -10,6 +10,8 @@ const scoreContainer = document.getElementById('score-container');
 const scoreElement = document.getElementById('score');
 const restartButton = document.getElementById('restart-button');
 
+ 
+
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -20,7 +22,7 @@ function startQuiz() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    answerButtons.innerHTML = ''; // Clear previous buttons
+    answerButtons.innerHTML = '';  
     Object.keys(question).forEach(key => {
         if (key !== 'question' && key !== 'correct') {
             const button = document.createElement('button');
@@ -64,6 +66,5 @@ function showScore() {
 }
 
 restartButton.addEventListener('click', startQuiz);
-
-// Start the quiz when the page loads
+ 
 startQuiz();
